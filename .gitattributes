@@ -1,0 +1,2 @@
+# Fuerza SVG a usar LF
+*.svg text eol=lf

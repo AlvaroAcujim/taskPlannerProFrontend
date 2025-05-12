@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js" type="module" defer></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article class="main__container" id="loginForm">
+          <div class="main__container__form">
+            <h1>Login de usuario</h1>
+            <div class="main__container__form__gridItem">
+              <label>Username o Email:</label>
+              <input type="text" required id="identifier">
+            </div>
+            <div class="main__container__form__gridItem">
+              <label>password:</label>
+              <input type="password" required id="password">
+            </div>
+            <div class="main__container__form__gridItem" >
+              <p id="errorMessagesLogin">Contraseña o identificador incorrectos</p>
+            </div>
+            <div class="main__container__form__gridItem">
+              <button id="loginBut">Login</button>
+              <a href="" id="toggleFormRegister">No tienes contraseña? crear cuenta</a>
+            </div>
+            
+          </div>
+    
+        </article>
+        <article class="main__container"  id="registerForm">
+          <div class="main__container__form">
+            <h1>Registro</h1>
+            <div class="main__container__form__gridItem">
+              <label>Username</label>
+              <input type="text" required id="registerUsername">
+            </div>
+            <div class="main__container__form__gridItem">
+              <label>password:</label>
+              <input type="password" required id="registerPassword">
+            </div>
+            <div class="main__container__form__gridItem">
+              <label>Email</label>
+              <input type="text" required id="registerEmail">
+            </div>
+            <div class="main__container__form__gridItem">
+              <button id="registerBut">Crear cuenta</button>
+              <a href="" id="toggleFormLogin">Tienes cuenta? logeate</a>
+            </div>
+          </div>
+    
+        </article>
+       </section>
+    </main>
+  </body>
+</html>
