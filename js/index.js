@@ -630,7 +630,7 @@ const generateWeatherCarts = (data) => {
 };
 
 function initWebSocket() {
-  socket = new WebSocket('ws://https://taskplannerprobackend.onrender.com:3001');
+  socket = new WebSocket('ws://localhost:3001');
 
   socket.onopen = () => {
     if (user.role === 'admin') {
