@@ -89,7 +89,7 @@ window.addEventListener('load', async(ev) => {
             } catch (err) {
 
                 console.error("Error al parsear los artículos almacenados:", err);
-                window.location.href = '/frontend/index.html';
+                window.location.href = './index.html';
             }
         }
         const tasks = await getAllUserTasks(user._id);

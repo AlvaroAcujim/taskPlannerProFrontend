@@ -27,7 +27,7 @@ export const login = async(identifier, password, errorMessageDisplay) => {
       const userData = await getUserByUsernameOrEmail(identifier);
       errorMessageDisplay('none');
       localStorage.setItem('user', JSON.stringify(userData));
-      window.location.href = '/frontend/index.html';
+      window.location.href = './index.html';
     }catch(err){
       errorMessageDisplay('block')
       
@@ -49,7 +49,7 @@ export const logout = async() => {
     document.cookie = `token=`;
     console.log('token guardado');  
     localStorage.clear();
-    window.location.href = '/frontend/login.html';
+    window.location.href = '/login.html';
   }catch(err){
     console.log(err);
     
@@ -84,7 +84,7 @@ export const authenticateUser = async() => {
     if (!res.ok) throw new Error('No autorizado');
 
   } catch(err) {
-    window.location.href = '/frontend/login.html';
+    window.location.href = '/login.html';
     console.log(err)
   }
 }
