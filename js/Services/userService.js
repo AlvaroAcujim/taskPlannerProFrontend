@@ -99,7 +99,7 @@ export const createUser = async(username, password, email, toggleDisplayForm, er
     })
     const data = await response.json();
     if(!response.ok){
-      errormessage.remove();
+      errormessage.textContent = ''
       const error = document.createTextNode(data.errors ? data.errors[0].msg : data.error);
       
       errormessage.append(error);
