@@ -88,7 +88,7 @@ export const authenticateUser = async() => {
     console.log(err)
   }
 }
-export const createUser = async(username, password, email, toggleDisplayForm) => {
+export const createUser = async(username, password, email, toggleDisplayForm, errormessage) => {
   try{
     const response = await fetch(`https://taskplannerprobackend.onrender.com/api/users`, {
       method: 'POST',
@@ -99,8 +99,11 @@ export const createUser = async(username, password, email, toggleDisplayForm) =>
     })
     const data = await response.json();
     if(!response.ok){
+      const error = document.createTextNode(response.error);
+      errormessage.append(error);
       throw new Error('Error en el registro');
     }
+    errormessage.styles.display = 'none'
     toggleDisplayForm('block', 'none');
     alert('Registro completado con exito!')
     return data

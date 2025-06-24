@@ -6,7 +6,7 @@ const registerFormContainer = document.getElementById('registerForm');
 const registerBut = document.getElementById('registerBut');
 const loginBut = document.getElementById('loginBut');
 const errorMessages = document.getElementById('errorMessagesLogin')
-
+const errormessage = document.getElementById('errorMessagesRegister')
 
 loginBut.addEventListener('click', async(ev) => {
     const identifier = document.getElementById('identifier').value.trim();
@@ -17,7 +17,7 @@ registerBut.addEventListener('click', async(ev) => {
     const registerUsername = document.getElementById('registerUsername').value.trim();
     const registerPassword = document.getElementById('registerPassword').value.trim();
     const registerEmail = document.getElementById('registerEmail').value.trim();
-    await createUser(registerUsername, registerPassword, registerEmail, toggleDisplayForm);
+    await createUser(registerUsername, registerPassword, registerEmail, toggleDisplayForm, errormessage);
 })
 toggleFormRegister.addEventListener('click', ev => {
     ev.preventDefault();
