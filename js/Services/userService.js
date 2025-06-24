@@ -103,8 +103,7 @@ export const createUser = async(username, password, email, toggleDisplayForm, er
       const error = document.createTextNode(data.errors ? data.errors[0].msg : data.error);
       
       errormessage.append(error);
-      console.log(errormessage)
-      if(data.errors[0].msg)console.log(data.errors[0].msg)
+      if(data.errors)console.log(data.errors[0].msg)
       if(data.error)console.log(data.error)
       throw new Error('Error en el registro');
     }
