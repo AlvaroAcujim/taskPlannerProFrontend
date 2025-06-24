@@ -101,6 +101,8 @@ export const createUser = async(username, password, email, toggleDisplayForm, er
     if(!response.ok){
       const error = document.createTextNode(response.error);
       errormessage.append(error);
+      console.log(errormessage)
+      console.log(response)
       throw new Error('Error en el registro');
     }
     errormessage.styles.display = 'none'
